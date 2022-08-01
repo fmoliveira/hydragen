@@ -48,7 +48,7 @@ async function checkInstalled(name, condition) {
 	if (condition) {
 		console.log(`${name} is already installed`)
 	} else {
-		await runCommand(`f generate setup ${name}`)
+		await runCommand(`hy generate setup ${name}`)
 	}
 }
 
