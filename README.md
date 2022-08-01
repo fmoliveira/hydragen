@@ -4,8 +4,6 @@ Convenient scaffolding for frequently used tooling.
 
 ## Introspection
 
-> Introspection is still going to be developed
-
 Make sure a repository is using all the best tooling practices from here.
 
 Introspect the repository to install and configure all best practices:
