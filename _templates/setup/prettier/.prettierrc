@@ -1,0 +1,8 @@
+---
+to: .prettierrc
+---
+{
+  "semi": false,
+  "useTabs": true,
+  "tabWidth": 2
+}
