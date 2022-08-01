@@ -1,0 +1,6 @@
+---
+to: .lintstagedrc
+---
+{
+	"*.{ts,tsx,js,jsx,json,html,css}": "prettier --write"
+}
