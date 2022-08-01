@@ -8,7 +8,7 @@
 	},
 	"keywords": [],
 	"author": "Filipe Oliveira",
-	"license": "ISC",
+	"license": "MIT",
 	"dependencies": {
 		"hygen": "^6.2.8"
 	},
