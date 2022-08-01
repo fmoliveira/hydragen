@@ -20,7 +20,7 @@ switch (command) {
 		process.exit(1)
 }
 
-function runGenerate() {
+async function runGenerate() {
 	const [generator, action] = args
 
 	if (!generator) {
@@ -33,36 +33,39 @@ function runGenerate() {
 		process.exit(1)
 	}
 
-	runCommand(`pnpm exec hygen ${generator} ${action}`)
+	await runCommand(`pnpm exec hygen ${generator} ${action}`)
 }
 
-function runIntrospection() {
+async function runIntrospection() {
 	const getFileName = (file) => path.basename(file, path.extname(file))
 	const fileExists = (file) => fs.existsSync(getFileName(file))
 
-	checkInstalled("prettier", fileExists(".prettierrc"))
-	checkInstalled("lint-staged", fileExists(".lintstagedrc"))
+	await checkInstalled("prettier", fileExists(".prettierrc"))
+	await checkInstalled("lint-staged", fileExists(".lintstagedrc"))
 }
 
-function checkInstalled(name, condition) {
+async function checkInstalled(name, condition) {
 	if (condition) {
 		console.log(`${name} is already installed`)
 	} else {
-		runCommand(`f generate setup ${name}`)
+		await runCommand(`f generate setup ${name}`)
 	}
 }
 
-function runCommand(command) {
-	try {
-		console.log(`Running command '${command}'`)
-		const [binExec, ...binArgs] = command.split(" ")
-		spawn(binExec, binArgs, {
-			stdio: "inherit",
-			stdin: "inherit",
-		})
-	} catch (error) {
-		console.error(`Failed to run '${command}'`)
-		console.error(error)
-		process.exit(1)
-	}
+async function runCommand(command) {
+	return new Promise((resolve) => {
+		try {
+			console.log(`Running command '${command}'`)
+			const [binExec, ...binArgs] = command.split(" ")
+			const spawned = spawn(binExec, binArgs, {
+				stdio: "inherit",
+				stdin: "inherit",
+			})
+			spawned.on("exit", () => resolve())
+		} catch (error) {
+			console.error(`Failed to run '${command}'`)
+			console.error(error)
+			process.exit(1)
+		}
+	})
 }
