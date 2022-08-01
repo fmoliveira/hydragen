@@ -4,14 +4,14 @@ Convenient scaffolding for frequently used tooling.
 
 ## Introspection
 
-Make sure a repository is using all the best tooling practices from here.
+This command will introspect the working repository and make sure it uses all the best tooling practices from here. All the generators listed below will be installed.
 
-Introspect the repository to install and configure all best practices:
+To run the introspection:
 
 - Install globally with `npm i -g hydragen` and run it with `hy`
 - Use with npx: `npx hydragen`
 
-## Run setups individually
+## Install generators individually
 
 Run individual setups powered by [Hygen](http://www.hygen.io/) generators:
 
