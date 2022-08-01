@@ -1,4 +1,4 @@
-# Tooling
+# Hydragen
 
 Convenient scaffolding for frequently used tooling.
 
@@ -8,8 +8,8 @@ Make sure a repository is using all the best tooling practices from here.
 
 Introspect the repository to install and configure all best practices:
 
-- Install globally with `npm i -g fmoliveira-tooling` and run it with `f`
-- Use with npx: `npx fmoliveira-tooling`
+- Install globally with `npm i -g hydragen` and run it with `hy`
+- Use with npx: `npx hydragen`
 
 ## Run setups individually
 
