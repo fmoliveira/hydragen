@@ -15,9 +15,9 @@ To run the introspection:
 
 Run individual setups powered by [Hygen](http://www.hygen.io/) generators:
 
-- `f generate <generator> <action>`
-- `f generate setup prettier` install and configure prettier
-- `f generate setup lint-staged` install and configure lint-staged with husky
+- `hy generate <generator> <action>`
+- `hy generate setup prettier` install and configure prettier
+- `hy generate setup lint-staged` install and configure lint-staged with husky
 
 ## Ideas for new generators
 
