@@ -4,6 +4,8 @@ Convenient scaffolding for frequently used tooling.
 
 ## Introspection
 
+> Introspection is still going to be developed
+
 Make sure a repository is using all the best tooling practices from here.
 
 Introspect the repository to install and configure all best practices:
@@ -15,8 +17,8 @@ Introspect the repository to install and configure all best practices:
 
 Run individual setups powered by [Hygen](http://www.hygen.io/) generators:
 
-- `f generate <generator> <action>`:
-- `f generate setup prettier`: install and configure prettier
+- `f generate <generator> <action>`
+- `f generate setup prettier` install and configure prettier
 - `f generate setup lint-staged` install and configure lint-staged with husky
 
 ## Ideas for new generators
