@@ -11,5 +11,8 @@
 	"license": "ISC",
 	"dependencies": {
 		"hygen": "^6.2.8"
+	},
+	"devDependencies": {
+		"prettier": "^2.7.1"
 	}
 }
